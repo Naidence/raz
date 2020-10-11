@@ -22,3 +22,13 @@ $router->get('/key', function () {
 $router->get('/biodata', function (){
     return "Nama : Muhammad Razan Nadhif <br>NIM : 1851150700111030";
 });
+
+$router->get('user','UserController@index');
+
+$router->post('tambahData','UserController@tambahData');
+
+$router->get('/id/{id}','UserController@getDatabyid');
+
+$router->put('/put/{id}','UserController@putData');
+
+$router->delete('/delete/{id}','UserController@deleteData');
